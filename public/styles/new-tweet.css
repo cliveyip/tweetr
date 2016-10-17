@@ -1,0 +1,25 @@
+.container .new-tweet {
+  border-style: solid;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.container .new-tweet h2{
+
+  border-style: hidden;
+  border-bottom: solid;
+}
+
+.container .new-tweet form textarea{
+  width: 100%;
+  padding: 0.5em;
+}
+
+.container .new-tweet form span.counter{
+  float: right;
+  /*
+  text-align: right;
+  */
+}
