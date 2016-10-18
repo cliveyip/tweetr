@@ -22,3 +22,7 @@
   text-align: right;
   */
 }
+
+.container .exceed_limit{
+  color: red;
+}

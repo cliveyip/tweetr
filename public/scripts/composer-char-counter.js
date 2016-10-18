@@ -11,7 +11,11 @@ $( document ).ready(function() {
       counter.text(text_left);
 
       if (text_left < 0) {
-        counter.css("color", "red");
+        //counter.css("color", "red");
+        counter.addClass( "exceed_limit" );
+      } else {
+        //counter.css("color", "black");
+        counter.removeClass( "exceed_limit" );
       }
     });
 });
