@@ -1,11 +1,12 @@
 #nav-bar {
-    position: fixed;
-    top: 0;
-    left: 2em;
-    right: 2em;
-    height: 80px;
-    background-color: #00a087;
-    color: #e8fdff;
+  position: fixed;
+  top: 0;
+  left: 2em;
+  right: 2em;
+  height: 80px;
+  background-color: #00a087;
+  color: #e8fdff;
+  z-index: 1;
 }
 
 #nav-bar .logo {

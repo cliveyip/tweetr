@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/display-tweets.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -20,6 +22,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
   </head>
 
   <body>
@@ -34,6 +37,8 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- Create new Tweet -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/">
@@ -41,6 +46,51 @@
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
+      </section>
+
+      <!-- Display the Tweets -->
+      <section id="display-tweets">
+
+        <!-- one Tweet -->
+        <article>
+          <header>
+            <img src='../images/smiley.png'>
+            <span class="full-name"> Bill Fields </span>
+            <span class='user-name'> @Mr Fields </span>
+          </header>
+
+          <section>
+            <p> Little Tweet Here </p>
+          </section>
+
+          <footer>
+            <span> 10 days ago </span>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-flag" aria-hidden="true"></i>
+          </footer>
+        </article>
+
+        <!-- one Tweet -->
+        <article>
+          <header>
+            <img src='../images/smiley.png'>
+            <span class="full-name"> Bill Fields </span>
+            <span class='user-name'> @Mr Fields </span>
+          </header>
+
+          <section>
+            <p> Little Tweet Here </p>
+          </section>
+
+          <footer>
+            <span> 10 days ago </span>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-flag" aria-hidden="true"></i>
+          </footer>
+        </article>
+
       </section>
     </main>
 

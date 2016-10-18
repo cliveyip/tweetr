@@ -1,0 +1,55 @@
+#display-tweets article {
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#display-tweets article:hover {
+  border: 1px solid black;
+  -webkit-filter: drop-shadow(2px 2px 4px darkgrey);
+  -webkit-filter: saturate(500%);
+
+}
+
+#display-tweets article header {
+  flex: 2;
+  background-color: silver;
+  border: hidden;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5em;
+}
+#display-tweets article header img {
+  float:left;
+  height: 50px;
+  width: 50px;
+}
+#display-tweets article header .full-name {
+  float:left;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 0 0 0 0.5em;
+}
+#display-tweets article header .user-name {
+  float:right;
+}
+#display-tweets article section {
+  flex: 4;
+  padding: 1em;
+}
+#display-tweets article footer {
+  flex: 1;
+  border-style: hidden;
+  border-top: 0.1px solid grey;
+  padding: 0.5em;
+}
+
+#display-tweets article footer .fa {
+  float:right;
+  margin: 0 0.2em;
+  display: none;
+}
