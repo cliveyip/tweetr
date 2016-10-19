@@ -5,6 +5,14 @@
  */
 
  $( document ).ready(function() {
+
+    // function to escape some text to prevent Cross-Site Scripting
+    function escape(str) {
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
    // Fake data taken from tweets.json
     var data = [
       {
@@ -72,7 +80,7 @@
                             '<span class="user-name">' + tweet.user.handle + '</span>' +
                     '</header>' +
                     '<section>' +
-                            '<p>' + tweet.content.text + '</p>' +
+                            '<p>' + escape(tweet.content.text) + '</p>' +
                     '</section>' +
                     '<footer>' +
                             '<span>' + Math.floor((new Date() - new Date(tweet.created_at)) / 86400000) + ' days ago' + '</span>' +
