@@ -21,3 +21,20 @@
   font-size: 2em;
   line-height: 3;
 }
+
+#compose-button {
+    background-color: #D6ECE7; /* light green */
+    color: #138A72;     /* green */
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-radius: 0.4em;
+    padding: 1em 1em;
+    margin: 0.5em 2em;
+    text-align: center;
+    float:right;
+}
+
+#compose-button:hover {
+    background-color: white;
+    color: black;
+}

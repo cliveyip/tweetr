@@ -40,7 +40,8 @@
         // calls createTweetElement for each tweet
         // takes return value and appends it to the tweets container
       var $tweet = $('<div></div>');
-      for (var i in tweets) {
+      for (var i = tweets.length - 1; i >= 0; i--) {
+        console.log(i);
         $tweet.append(createTweetElement(tweets[i]));
       }
       return $tweet;
@@ -51,7 +52,7 @@
         url: '/tweets/',
         method: 'GET',
         success: (response) => {
-          $('#display-tweets').append(renderTweets(response));
+          $('#display-tweets').html(renderTweets(response));
         }
       });
     }
@@ -81,5 +82,12 @@
     })
 
     loadTweets();
+
+    $(".new-tweet").hide();
+
+    $('#compose-button').on('click', function (){
+      $(".new-tweet").slideToggle(200);
+      $(".new-tweet > form > textarea").focus();
+    });
 
  });
