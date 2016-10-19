@@ -77,6 +77,10 @@
           }
         });
         loadTweets();
+        // Clear text
+        $('.new-tweet > form > textarea').val("");
+        // Reset counter
+        $('.new-tweet > form > .counter').text('140');
       }
 
     })
