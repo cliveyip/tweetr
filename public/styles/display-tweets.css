@@ -6,14 +6,11 @@
   margin-top: 2em;
   display: flex;
   flex-direction: column;
-
 }
 
 #display-tweets article:hover {
   border: 1px solid black;
-  -webkit-filter: drop-shadow(2px 2px 4px darkgrey);
   -webkit-filter: saturate(500%);
-
 }
 
 #display-tweets article header {
