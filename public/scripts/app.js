@@ -100,7 +100,14 @@
 
     $('#new_tweet_form').on('submit', function(ev){
       ev.preventDefault();
-      console.log( $( this ).serialize() );
+      $.ajax({
+        url: '/tweets/',
+        method: 'POST',
+        data: $(this).serialize(),
+        success: function () {
+          console.log('Successfully sent' + data + ' to server.');
+        }
+      });
     })
 
  });
