@@ -90,11 +90,17 @@
                     '</footer>');
 
       return $tweet;
+
     }
 
     //console.log($tweet); // to see what it looks like
     //$('#display-tweets').append('hi'); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
     //$('#display-tweets').append(createTweetElement(data));
     $('#display-tweets').append(renderTweets(data));
+
+    $('#new_tweet_form').on('submit', function(ev){
+      ev.preventDefault();
+      console.log( $( this ).serialize() );
+    })
 
  });
