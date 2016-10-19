@@ -90,4 +90,7 @@
       $(".new-tweet > form > textarea").focus();
     });
 
+    // $('#display-tweets').mouseenter('article', function(){
+    //   $(this).find('.fa').toggle();
+    // });
  });

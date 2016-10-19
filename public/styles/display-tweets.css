@@ -48,5 +48,9 @@
 #display-tweets article footer .fa {
   float:right;
   margin: 0 0.2em;
-  display: none;
+  visibility: hidden;
+}
+
+#display-tweets article:hover .fa{
+  visibility: visible;
 }
