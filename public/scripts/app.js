@@ -110,15 +110,23 @@
       ev.preventDefault();
 
       const request_data = $(this).serialize();
+      const tweet_length = request_data.length - 5;
 
-      $.ajax({
-        url: '/tweets/',
-        method: 'POST',
-        data: request_data,
-        success: (response) => {
-          console.log('Successfully sent post request', request_data, response);
-        }
-      });
+      if (tweet_length === 0) {
+        alert('Tweet cannot be empty!');
+      } else if (tweet_length > 140) {
+        alert('Tweet cannot be longer than 140 characters!');
+      } else {
+        $.ajax({
+          url: '/tweets/',
+          method: 'POST',
+          data: request_data,
+          success: (response) => {
+            console.log('Successfully sent post request', request_data, response);
+          }
+        });
+      }
+
     })
 
     loadTweets();
