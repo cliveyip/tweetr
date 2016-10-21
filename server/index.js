@@ -8,6 +8,8 @@ const app         = express();
 const tweetsApi  = require('./api/tweets');
 const db         = require('./lib/db');
 
+require('dotenv').config();
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
