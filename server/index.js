@@ -1,6 +1,7 @@
 "use strict";
 
-const PORT        = 5000;
+//const PORT        = 8080;
+app.set('port', (process.env.PORT || 8080));
 const express     = require("express");
 const bodyParser  = require("body-parser");
 const app         = express();
@@ -17,6 +18,6 @@ db.connect((dbInstance) => {
   app.use('/tweets', tweetsApi(dbInstance));
 });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log("Example app listening on port " + PORT);
 });
