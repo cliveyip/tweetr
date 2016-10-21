@@ -6,7 +6,8 @@
 // Mongo DB code
 const MongoClient = require("mongodb").MongoClient;
 //const MONGODB_URI = "mongodb://127.0.0.1:27017/tweeter";
-const MONGODB_URI = process.env.MONGODB_URI;
+// const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = "mongodb://heroku_zr9m249t:8afd02b7lvb4orjj3u1vnq6efp@ds023593.mlab.com:23593/heroku_zr9m249t";
 
 const dbMethods = {
 

@@ -8,7 +8,7 @@ const app         = express();
 const tweetsApi  = require('./api/tweets');
 const db         = require('./lib/db');
 
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
