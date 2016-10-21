@@ -1,7 +1,6 @@
 "use strict";
 
 //const PORT        = 8080;
-app.set('port', (process.env.PORT || 8080));
 const express     = require("express");
 const bodyParser  = require("body-parser");
 const app         = express();
@@ -11,6 +10,7 @@ const db         = require('./lib/db');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
+app.set('port', (process.env.PORT || 8080));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
